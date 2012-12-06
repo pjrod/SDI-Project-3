@@ -7,15 +7,17 @@
 //Variables
 
 var warpDrive          = "Warp Drive",
-	spaceships         = ["Necrosis", "Argonia", "Leviathan", "Hawkeye", "Titan 1"],
+	solSpaceShips	   = 5,
+	spaceShips         = ["Necrosis", "Argonia", "Leviathan", "Hawkeye", "Titan 1"],
+	enemySpaceShips	   = 5,
 	pirateSpaceShips   = ["Noob", "Mortar", "Interceptor", "Weaver", "Kamari"],
 	warpSpeed          = [ 1, 2, 3, 4, 5,],
 	planetarySystems   = 10,
 	developedWarpDrive = true,
     planet1	           = "reptile",
     planet2            = "Omega",
-    reptilian 		   = true;
-    
+    reptilian 		   = true,
+    warpShips          = 10;
 //Procedure
 var warpDriveIsAGo = developedWarpDrive; {
 	if (developedWarpDrive === true) {
@@ -48,12 +50,16 @@ console.log(outcome);
 console.log("Aquatics came from " + planet2 + ".");
 
 //Number Function
+var numberOfSpaceship = function(solSpaceShips,enemySpaceShips){
+	var warpShips = 5 + 5;
+	
+	return totalWarpShips;
+};
+for (totalWarpShips = warpShips; warpShips > 0; warpShips--) {
+		console.log(warpShips + " spaceships have warp capabilities.");	
 
-
-
-
-
-
+};
+console.log("No more spaceships with warp capabilities.");
 /*var planets = function(planet1,planet2){
 	var species = [planet1, planet2];
 
