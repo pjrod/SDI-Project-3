@@ -75,15 +75,22 @@ var exploredSystems = function(systems1,systems2) {
 }
 var theSystems = exploredSystems(10,5);
 console.log(theSystems);
-
-var newNoPiratesystems = function(np){
-	var newSystems = np + noPirateSystem;
+//Method Mutator
+var newNoPirateSystems = function(nop){
+	var newSystems = nop + noPirateSystem;
 	return newSystems;
 };
 console.log("A new system was discovered by humans recently, now");
-var totalNoPirateSytems = newNoPiratesystems(1);
+var totalNoPirateSytems = newNoPirateSystems(1);
 console.log("there are " + totalNoPirateSytems + " systems without pirate spaceships.");
-
+//Method Mutator
+var newPirateSystems = function(newp){
+	var newSystemsWithPirates = newp + pirateSystems;
+	return newSystemsWithPirates;
+};
+console.log("The Sol system spaceship " + spaceShips[0] + ", while in deep space patrol,");
+var totalPirateSystems = newPirateSystems(2);
+console.log("discovered " + (totalPirateSystems - pirateSystems) + " new planetary systems with pirate spaceships." + " there are now " + totalPirateSystems + " systems with pirate spaceships.");
 /*var planets = function(planet1,planet2){
 	var species = [planet1, planet2];
 
