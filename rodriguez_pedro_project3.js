@@ -13,6 +13,7 @@ var warpDrive          = "Warp Drive",
 	pirateSpaceShips   = ["Noob", "Mortar", "Interceptor", "Weaver", "Kamari"],
 	warpSpeed          = [ 1, 2, 3, 4, 5,],
 	planetarySystems   = 10,
+	pirateSystems      = 5,
 	developedWarpDrive = true,
     planet1	           = "reptile",
     planet2            = "Omega",
@@ -59,7 +60,21 @@ for (totalWarpShips = warpShips; warpShips > 0; warpShips--) {
 		console.log(warpShips + " spaceships have warp capabilities.");	
 
 };
+//Main Code
 console.log("No more spaceships with warp capabilities.");
+
+var exploredSystems = function(systems1,systems2) {
+	var noPirateSystem = systems1 - systems2;
+	if (noPirateSystem === 5){
+		return "There are " + noPirateSystem + " systems with out pirate spaceships.";
+	} else {
+		return "The planetary systems are free of pirate spaceships.";
+	};
+}
+var theSystems = exploredSystems(10,5);
+console.log(theSystems);
+
+
 /*var planets = function(planet1,planet2){
 	var species = [planet1, planet2];
 
