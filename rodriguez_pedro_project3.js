@@ -14,6 +14,7 @@ var warpDrive          = "Warp Drive",
 	warpSpeed          = [ 1, 2, 3, 4, 5,],
 	planetarySystems   = 10,
 	pirateSystems      = 5,
+	noPirateSystem	   = 5,
 	developedWarpDrive = true,
     planet1	           = "reptile",
     planet2            = "Omega",
@@ -63,6 +64,7 @@ for (totalWarpShips = warpShips; warpShips > 0; warpShips--) {
 //Main Code
 console.log("No more spaceships with warp capabilities.");
 
+//Boolean function
 var exploredSystems = function(systems1,systems2) {
 	var noPirateSystem = systems1 - systems2;
 	if (noPirateSystem === 5){
@@ -74,6 +76,13 @@ var exploredSystems = function(systems1,systems2) {
 var theSystems = exploredSystems(10,5);
 console.log(theSystems);
 
+var newNoPiratesystems = function(np){
+	var newSystems = np + noPirateSystem;
+	return newSystems;
+};
+console.log("A new system was discovered by humans recently, now");
+var totalNoPirateSytems = newNoPiratesystems(1);
+console.log("there are " + totalNoPirateSytems + " systems without pirate spaceships.");
 
 /*var planets = function(planet1,planet2){
 	var species = [planet1, planet2];
