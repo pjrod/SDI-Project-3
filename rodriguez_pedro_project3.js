@@ -8,7 +8,7 @@
 
 var warpDrive          = "Warp Drive",
 	solSpaceShips	   = 5,
-	spaceShips         = ["Necrosis", "Argonia", "Leviathan", "Hawkeye", "Titan 1"],
+	spaceShips         = ["Necrosis", "Argonia", "Leviathan", "Hawkeye", "Titan"],
 	enemySpaceShips	   = 5,
 	pirateSpaceShips   = ["Noob", "Mortar", "Interceptor", "Weaver", "Kamari"],
 	warpSpeed          = [ 1, 2, 3, 4, 5,],
@@ -91,6 +91,84 @@ var newPirateSystems = function(newp){
 console.log("The Sol system spaceship " + spaceShips[0] + ", while in deep space patrol,");
 var totalPirateSystems = newPirateSystems(2);
 console.log("discovered " + (totalPirateSystems - pirateSystems) + " new planetary systems with pirate spaceships." + " there are now " + totalPirateSystems + " systems with pirate spaceships.");
+
+//Main Code
+console.log("There are Five clases of spaceships");
+
+//Object Function
+
+var shipClasses ={
+	
+	classType:          ["Dreadnought", "Battle Cruiser", "Cruiser", "Frigate", "Smuggler"],
+	namesSol:           ["Necrosis", "Argonia", "Leviathan", "Hawkeye", "Titan"],
+	namesPships:        ["Noob", "Mortar", "Interceptor", "Weaver", "Kamari"],
+	crewsSol:           [300,200,150,50,25],
+	crewsPships:        [200,150,50,25,15],
+	armament:           {
+						 Dreadnought:   ["15 Laser Cannons", "10 Turbo lasers", "6 Torpedo Bays"],
+						 BattleCruiser: ["10 Laser Cannons", "5 Turbo Lasers", "3 Torpedo Bays"],
+						 Cruiser:		["5 Laser Cannons", "3 Turbo Lasers", "2 Torpedo Bays"],
+						 Frigate:		["2 Laser Cannons", "2 Turbo Lasers", "1 Torpedo Bay"],
+						 Smuggler:		["1 Laser Cannon", "1 Turbo Laser", "0 Torpedo Bays"],
+	},
+						 
+	cargoBaysSol:       [10,8,6,4,2],
+	cargoBaysPShips:    [15,10,5,3,1],
+	hitPointsSol:       [1000,800,600,400,200],
+	attackPointsSol:    [100,80,60,40,20],
+	hitPointsPShips:    [500,400,300,200,100],
+	attackPointsPShips: [150,130,110,90,70],
+	classTypeShips: 	function (){
+		console.log("The classes of ships are as follows!");
+	}
+	
+	};
+	
+shipClasses.classTypeShips();
+console.log("Class 1 " +
+			shipClasses.classType[0] + ", " +
+			" Class 2 " +
+			shipClasses.classType[1] + ", " +
+			" Class 3 " +
+			shipClasses.classType[2] + ", " +
+			" Class 4 " +
+			shipClasses.classType[3] + ", " +
+			" Class 5 " +
+			shipClasses.classType[4] + "."); 
+if (shipClasses.namesSol === [1]){
+	if (shipClasses.classType === [0]){
+		console.log(shipClasses.namesSol[0] + " has " + shipClasses.armament.Dreadnought[0]);
+	} else {
+		console.log(shipClasses.namesSol[0] + " is not a Battle Cruiser, Cruiser, Frigate, or Smuggler.");
+	};
+} else {
+	if (shipClasses.namesSol === [0]){
+		console.log(shipClasses.namesSol[1] + " is a " + shipClasses.classType[1] + " and has " + shipClasses.armament.BattleCruiser[0]);
+		} else {
+			console.log(shipClasses.namesSol[1] + " is not a Dreadnought, Cruiser, Frigate, or Smuggler.");
+	
+	};
+};			
+
+for (var i=0, s=shipClasses.namesSol.length; i < s; i++){
+	console.log("The " + shipClasses.namesSol[i] + " is a " + shipClasses.classType[i] );
+};
+
+//Array Function
+var shipBattles = function(){
+	console.log("The Necrosis has engaged a pirate Dreadnought in battle.");
+}
+shipBattles();
+	var Dreadnought = shipClasses.hitPointsSol[0];
+	while (Dreadnought > 0 ){
+		console.log("The Necrosis has " + Dreadnought + "hp of hull Integrity Left.");
+		Dreadnought = Dreadnought - shipClasses.attackPointsPShips[0] * .50;
+	}
+
+
+console.log("The Necrosis was lost in battle.");
+
+//console.log(spaceShips);
 /*var planets = function(planet1,planet2){
 	var species = [planet1, planet2];
 
